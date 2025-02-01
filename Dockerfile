@@ -11,4 +11,4 @@ WORKDIR /app
 COPY . .
 EXPOSE 5000
 
-CMD flask run -h 0.0.0.0 -p 5000 & python3 -m devgagan
+CMD gunicorn app:app & python3 -m devgagan
